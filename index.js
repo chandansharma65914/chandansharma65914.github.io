@@ -72,3 +72,27 @@ $(document).ready(function () {
   });
 });
 
+function sendEmail(){
+  const mess=
+   `Name : ${document.getElementById("name").value}
+   <br>
+    Email: ${document.getElementById("email").value}
+     <br>
+    Subject: ${document.getElementById("subject").value}
+    <br>
+    Message: ${document.getElementById("content").value}
+   
+   `
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "chandansharma35781@gmail.com",
+    Password : "35C0B250A52456B4C03D05859A6261EDAFFF",
+    To : 'chandansharma65914@gmail.com',
+    From : "chandansharma35781@gmail.com",
+    Subject : document.getElementById("subject").value,
+    Body : mess
+}).then(
+  message => alert(message)
+);
+}
+
