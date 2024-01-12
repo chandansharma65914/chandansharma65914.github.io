@@ -91,8 +91,8 @@ function sendEmail(){
     From : "chandansharma35781@gmail.com",
     Subject : document.getElementById("subject").value,
     Body : mess
-}).then(
-  message => alert(message)
-);
+}).then((message)=>{
+  alert("Message sent successfully")
+});
 }
 
