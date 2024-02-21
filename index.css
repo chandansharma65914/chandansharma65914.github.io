@@ -782,3 +782,8 @@ footer span a:hover {
     line-height: 38px;
   }
 }
+.project-description{
+  overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+}
